@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>My Love 💖</title>
+
+<style>
+body{
+margin:0;
+background:linear-gradient(120deg,#ffd1ec,#dbe9ff,#e8d9ff);
+font-family:'Comic Sans MS',cursive;
+text-align:center;
+overflow:hidden;
+}
+
+h1{color:#c7005b;font-size:42px;text-shadow:0 0 12px #fff;}
+h2{color:#b30059;}
+p{font-size:20px;color:#800040;}
+
+.container{padding:30px;}
+
+.polaroid{
+background:white;
+padding:10px;
+width:270px;
+margin:20px auto;
+box-shadow:0 15px 30px rgba(0,0,0,.2);
+transform:rotate(-2deg);
+}
+
+.polaroid img{width:100%;border-radius:5px;}
+
+.box{
+background:rgba(255,255,255,.7);
+border-radius:25px;
+padding:25px;
+margin:20px;
+box-shadow:0 0 20px rgba(255,182,193,.8);
+}
+
+button{
+background:#ff6fae;
+color:white;
+border:none;
+padding:15px 35px;
+border-radius:40px;
+font-size:22px;
+margin:15px;
+box-shadow:0 0 15px #fff;
+}
+
+#message{font-size:28px;color:#b30059;}
+
+#surprise{
+display:none;
+font-size:28px;
+background:white;
+padding:30px;
+border-radius:30px;
+box-shadow:0 0 30px #ffb6c1;
+margin:20px;
+}
+
+.sticker{position:fixed;font-size:55px;opacity:.3;}
+.s1{top:5%;left:5%;}
+.s2{top:15%;right:10%;}
+.s3{bottom:12%;left:10%;}
+.s4{bottom:5%;right:5%;}
+
+.heart{
+position:absolute;
+top:100%;
+font-size:22px;
+color:#ff4d88;
+animation:float 10s linear forwards;
+pointer-events:none;
+}
+
+@keyframes float{
+0%{transform:translateY(0);opacity:1;}
+100%{transform:translateY(-120vh);opacity:0;}
+}
+
+#tinyHeart{
+font-size:35px;
+cursor:pointer;
+animation:pulse 1.5s infinite;
+}
+
+@keyframes pulse{
+0%{transform:scale(1);}
+50%{transform:scale(1.3);}
+100%{transform:scale(1);}
+}
+
+#secret{display:none;}
+</style>
+</head>
+<body>
+
+<div class="sticker s1">🌸</div>
+<div class="sticker s2">✨</div>
+<div class="sticker s3">💖</div>
+<div class="sticker s4">🌷</div>
+
+<div class="container">
+
+<h1>Hey My Love 💕</h1>
+
+<div class="polaroid">
+<img src="https://i.postimg.cc/t72gK9tv/IMG-20260209-224312-381.jpg">
+<p>Us 💖</p>
+</div>
+
+<div class="box">
+In every ups and downs I will always be with u.  
+I loveee youu sooo muchh my babyyy 💞
+</div>
+
+<div class="box">
+<h2>To my love & my jaan 💖</h2>
+<p>From the moment you came into my life, everything felt brighter. Your smile feels like sunshine, and your voice feels like home.</p>
+<p>My love, even when life gets hard, I promise I will always stay by your side. My jaan, you are my heart’s favorite person.</p>
+<p>You are my forever Valentine 💕</p>
+</div>
+
+<h1>Will you be my forever Valentine? 💖</h1>
+<button onclick="yes()">YES 💕</button>
+<button onclick="no()">NO 😢</button>
+<div id="message"></div>
+<div id="surprise">🎉 Yayyy my love & my jaan! 💖</div>
+<h2 id="countdown"></h2>
+<p>Tap the tiny heart 💕</p>
+<div id="tinyHeart" onclick="reveal()">💗</div>
+<div class="box" id="secret">My heart will always choose you 💞</div>
+<p>— Your Sweetheart 💖</p>
+</div>
+
+<script>
+function yes(){document.getElementById("message").innerHTML="YAY!! 💖";document.getElementById("surprise").style.display="block";}
+function no(){document.getElementById("message").innerHTML="Try again 😜";}
+function reveal(){document.getElementById("secret").style.display="block";}
+setInterval(()=>{const h=document.createElement("div");h.className="heart";h.innerHTML="💖";h.style.left=Math.random()*100+"vw";document.body.appendChild(h);setTimeout(()=>h.remove(),10000);},1200);
+const v=new Date("Feb 14, 2026 00:00:00").getTime();setInterval(()=>{const d=v-new Date().getTime();document.getElementById("countdown").innerHTML="⏳ "+Math.floor(d/(1000*60*60*24))+" days until Valentine’s Day 💕";},1000);
+</script>
+
+</body>
+</html>
